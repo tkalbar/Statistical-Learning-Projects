@@ -10,14 +10,6 @@ library("caret", lib.loc="/usr/local/Cellar/r/3.3.2/R.framework/Versions/3.3/Res
 
 ```
 
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
-
 You can use the [editor on GitHub](https://github.com/tkalbar/StatisticalLearningProjects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
