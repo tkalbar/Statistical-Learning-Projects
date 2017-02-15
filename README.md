@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+
+
+
+### Tomasz Kalbarczyk
+## Assignment 2 - Predicting transcoding times based on video features
 
 You can use the [editor on GitHub](https://github.com/tkalbar/StatisticalLearningProjects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
