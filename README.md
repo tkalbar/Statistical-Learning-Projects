@@ -5,6 +5,10 @@
 
 ## Assignment 2 - Predicting transcoding times based on video features
 
+```ruby
+    gem "github-pages", group: :jekyll_plugins
+    ```
+
 You can use the [editor on GitHub](https://github.com/tkalbar/StatisticalLearningProjects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
