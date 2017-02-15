@@ -1,13 +1,22 @@
-
-
-
 ### Tomasz Kalbarczyk
 
 ## Assignment 2 - Predicting transcoding times based on video features
 
-```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+```r
+    ## declare libraries
+library("glmnet", lib.loc="/usr/local/lib/R/3.3/site-library")
+library("leaps", lib.loc="/usr/local/lib/R/3.3/site-library")
+library("caret", lib.loc="/usr/local/Cellar/r/3.3.2/R.framework/Versions/3.3/Resources/library")
+
+```
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
 
 You can use the [editor on GitHub](https://github.com/tkalbar/StatisticalLearningProjects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
