@@ -46,20 +46,17 @@ cur_data = dataset_input
 cur_data$id = NULL # not needed
 cur_data$b_size = NULL # constant variable
 ```
-
 2. Deal with categorical variables by converting the data frame into a design matrix.
 ```r
 ## Deal with categorical variables
 matrix = model.matrix(~.,subset(cur_data,select = -utime))
 ```
-
 3. Remove near zero variance predictors (`b`)
 ```r
 ## Remove zero and near zero variance predictors
 nzv = nearZeroVar(matrix)
 matrix_nzv = matrix[,-nzv]
 ```
-
 4. Find correlated predictors, and use an 80% threshold for pruning correlated variables.
 ```r
 ## Find correlation in dataset
@@ -125,7 +122,6 @@ o_width   20
 o_height   21 
 umem   22 
 ```
-
 5. Center and scale the predictors, and then rebind the response variable to the final dataset before returning it.
 ```r
 # center and scale the predictors
@@ -147,7 +143,6 @@ model_linear_all_rmse = sqrt(mean((transcoding_data_test$utime - model_linear_al
 model_linear_all_rmse
 ```
 Gives an RMSE of: `9.675779`
-
 2. We run three variants for linear regression with BIC: exhaustive, forward and backward. Below is the code for retrieving the subsets.
 ```r
 ## Linear regression using BIC
@@ -240,9 +235,7 @@ utime ~ duration + codech264 + codecmpeg4 + bitrate + framerate +
     o_codecmpeg4:o_codecvp8
 ```
 We obtain an RMSE of: `7.088572`
-
 It is notable that for the backward and forward models, there are some linear dependencies in the newly introduced variables. A few more passes of pruning collinearity and rerunning BIC might have yielded better results. Moreover, although not shown here, using a log link function with the current predictor set did not improve RMSE.
-
 3. Lasso Regression. Below is the code for lasso regression. Using `cv.glmnet` we automate the cross validation in order to retrieve the lambda that minimizes RMSE. Below is the code.
 ```r
 ## Lasso regression model
@@ -285,7 +278,6 @@ umem          6.7447330
 [1] 0.01190226
 ```
 And running the model itself, we obtained an RMSE of: 9.677331
-
 4. Ridge regression. We have a similar model to that for Lasso. `glmnet` allows us to simply change `alpha` and obtain the ridge regression model.
 ```r
 pre_processed_train_matrix = model.matrix(utime~.,pre_processed_train)
@@ -327,7 +319,6 @@ umem          6.48613781
 [1] 1.162862
 ```
 And, finally, the RMSE: `9.726458`
-
 In summary, we obtained the following RMSE values for the six variations of the linear models.
 ```
 > model_linear_all_rmse
